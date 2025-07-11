@@ -234,8 +234,8 @@ def predict(input_batches):
         # print(torch.tensor([tokenizer(batches)['input_ids']]).cuda().shape)
         # print(torch.tensor([tokenizer(batches)['attention_mask']]).cuda()["logits"][0].shape)
         #print(torch.tensor([tokenizer(batches)['input_ids']]).cuda().squeeze().shape)
-
-        pred=(sig(model(torch.tensor([tokenizer(batches)['input_ids']]).squeeze().cuda(),torch.tensor([tokenizer(batches)['attention_mask']]).squeeze().cuda())["logits"]).tolist())
+        with torch.no_grad():
+            pred=(sig(model(torch.tensor([tokenizer(batches)['input_ids']]).squeeze().cuda(),torch.tensor([tokenizer(batches)['attention_mask']]).squeeze().cuda())["logits"]).tolist())
         #print(len(pred[0]))
         for p in pred:
             outputpreds.append(p)
@@ -247,10 +247,10 @@ def write_output(pred,listofpeps):
     n="\n"
     writethisline="pep,"
     for i in range(len(labsoi)):
-        writethisline+=pos2lab[i]
-    hf.write(writethisline+n)
+        writethisline+=pos2lab[i]+','
+    hf.write(writethisline[:-1]+n)
     for p,ip in zip(pred,listofpeps):
-        writethisline=f"{ip}"
+        writethisline=f"{ip},"
         r=ip[10]
         #print(p)
         easyreadlab=getlab(p,r)
