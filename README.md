@@ -197,7 +197,7 @@ FASTA_FILE contain protein sequences in proper fasta or a2m format
 TXT_FILE cointain protien peptides 21 in length with the center
 residue being the PTM modification site
 
-
+```
 Pattern selection and interpretation:
   -B, --batch_size          (int) that describes how many predictions
                             can be predicted at a time on the GPU
@@ -216,7 +216,7 @@ Pattern selection and interpretation:
 
   -o  --output              location of the output csv
 
-
+```
 
 
 
