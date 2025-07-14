@@ -186,18 +186,18 @@ Use the code below to get started with the model.
 <!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
 
 ### Direct Use
-
+```
 Usage: python3 claspp_forward.py [OPTION]... --input INPUT [FASTA_FILE or TXT_FILE]...
 predict PTM events on peptides or full sequences
 
-Example 1: python3 claspp_forward.py -B 100 -S 0 -i random.txt
-Example 2: python3 claspp_forward.py -B 50 -S 1 -i random.fasta
+Example 1: python3 claspp_forward.py -B 100 -S 0 -i fake.txt
+Example 2: python3 claspp_forward.py -B 50 -S 1 -i fake.fasta
 
 FASTA_FILE contain protein sequences in proper fasta or a2m format
 TXT_FILE cointain protien peptides 21 in length with the center
 residue being the PTM modification site
 
-```
+
 Pattern selection and interpretation:
   -B, --batch_size          (int) that describes how many predictions
                             can be predicted at a time on the GPU
