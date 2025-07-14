@@ -1,14 +1,4 @@
----
-license: mit
-language:
-- en
-base_model:
-- andrewdalpino/ESM2-150M-Protein-Molecular-Function
-pipeline_tag: text-classification
-tags:
-- biology
-- protein
----
+
 # Contrastively Learned Attention based Stratified PTM Predictor (CLASPP) a unified PTM prediction model
 
 <!-- Provide a quick summary of what the model is/does. -->
