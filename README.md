@@ -117,7 +117,7 @@ Installing torch can be the most complex part
 make sure [git lfs](https://git-lfs.com/) is install 
 
 ```   
-git clone https://huggingface.co/gravelcompbio/Claspp
+git clone https://huggingface.co/esbglab/Claspp_forward
 ```   
 
 
