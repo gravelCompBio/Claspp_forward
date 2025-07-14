@@ -68,7 +68,7 @@ Installing torch can be the most complex part
   <img width="100%" src= "figures/Screenshot%20from%202025-07-11%2014-19-21.png">
 </p>
 
-| PTM type  | Residue trained on | Number of clusters allocated|output indexes|input indexes (training)|
+| PTM type  | Residue trained on | Number of clusters allocated|output indexes|input label indexes (training)|
 | -------------------- | ------------- |--------------------------|------------|-------------|
 | ST_Phosphorylation | S,T | 5 | 0 or 1 | 0-4 |
 | Y_Phosphorylation | Y | 1 | 3 | 25 |
