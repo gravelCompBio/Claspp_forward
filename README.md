@@ -187,62 +187,34 @@ Use the code below to get started with the model.
 
 ### Direct Use
 
-<!-- This section is for the model use without fine-tuning or plugging into a larger ecosystem/app. -->
+Usage: python3 claspp_forward.py [OPTION]... --input INPUT [FASTA_FILE or TXT_FILE]...
+predict PTM events on peptides or full sequences
 
-[More Information Needed]
+Example 1: python3 claspp_forward.py -B 100 -S 0 -i random.txt
+Example 2: python3 claspp_forward.py -B 50 -S 1 -i random.fasta
 
-
-### Recommendations
-
-<!-- This section is meant to convey recommendations with respect to the bias, risk, and technical limitations. -->
-
-Users (both direct and downstream) should be made aware of the risks, biases and limitations of the model. More information needed for further recommendations.
-
+FASTA_FILE contain protein sequences in proper fasta or a2m format
+TXT_FILE cointain protien peptides 21 in length with the center
+residue being the PTM modification site
 
 
+Pattern selection and interpretation:
+  -B, --batch_size          (int) that describes how many predictions
+                            can be predicted at a time on the GPU
+                            (reduce if you get run out of GPU space)
 
+  -S  --scrape_fasta        (int) should be a 1 or a 0 
+                            1 = read a fasta and scrape posible 21 peptides
+                            that can be modified by a PTM 
+                            0 = read a txt file that has the 21mer already 
+                            sperated and all peptides should be sperated by 
+                            a '\\n' (can be faster) than fasta option
+  
+  -h  --help                your reading it right now
 
-## Training Details
+  -i  --input               location of the input fasta or txt
 
-### Training Data
-
-<!-- This should link to a Dataset Card, perhaps with a short stub of information on what the training data is all about as well as documentation related to data pre-processing or additional filtering. -->
-
-[More Information Needed]
-
-### Training Procedure
-
-<!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
-
-#### Preprocessing [optional]
-
-[More Information Needed]
-
-
-#### Training Hyperparameters
-
-- **Training regime:** [More Information Needed] <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
-
-
- 
-
-## Hardware
-
-[More Information Needed]
-
-
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the model, the APA and Bibtex information for that should go in this section. -->
-
-**BibTeX:**
-
-[More Information Needed]
-
-**APA:**
-
-[More Information Needed]
+  -o  --output              location of the output csv
 
 
 
