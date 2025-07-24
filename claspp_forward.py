@@ -236,12 +236,12 @@ def predict(input_batches):
         # print(torch.tensor([tokenizer(batches)['input_ids']]).cuda().shape)
         # print(torch.tensor([tokenizer(batches)['attention_mask']]).cuda()["logits"][0].shape)
         #print(torch.tensor([tokenizer(batches)['input_ids']]).cuda().squeeze().shape)
-        print(tokenizer(batches)['input_ids'])
-        print(torch.tensor([tokenizer(batches)['input_ids']]).squeeze().cuda())
+        # print(tokenizer(batches)['input_ids'])
+        # print(torch.tensor([tokenizer(batches)['input_ids']]).squeeze().cuda())
         pred=(sig(model(torch.tensor([tokenizer(batches)['input_ids']]).squeeze().cuda(),torch.tensor([tokenizer(batches)['attention_mask']]).squeeze().cuda())["logits"]).tolist())
         #print(len(pred[0]))
         for p in pred:
-            print(p)
+            # print(p)
             outputpreds.append(p)
     return outputpreds
 
@@ -392,8 +392,8 @@ def main():
             continue
         temp.append(pep.replace("-", "<pad>"))
     input_batches.append(temp)
-    print(listofpeps)
-    print(input_batches)
+    # print(listofpeps)
+    # print(input_batches)
     pred=predict(input_batches=input_batches)
     write_output(pred,listofpeps,file_output)
 
