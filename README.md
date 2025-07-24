@@ -221,7 +221,9 @@ Pattern selection and interpretation:
 
 
 
-- **Developed by:** [Nathan Gravel]
+- **Developed by:** Major author for most code Nathan Gravel. Finetuning code inspried by Zhongliang Zhou,
+- Contrastive learing code inspried by Ruili Fang, Codebase testing and verstion controle by Austin Downes,
+- Webtool dev Saber Soleymani
 - **Funded by [optional]:** [NIH]
 - **Shared by [optional]:** [More Information Neede]
 - **Model type:** [Text classication]
