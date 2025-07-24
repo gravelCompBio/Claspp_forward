@@ -16,8 +16,10 @@ from datasets import (
 from modeling_esm import EsmForSequenceClassificationCustomWidehead
 
 
+print("intilizing checkpoint --might take a few min if this is the first time--")
 tokenizer = EsmTokenizer.from_pretrained("finalCheckpoint_25_05_11/")
 model = EsmForSequenceClassificationCustomWidehead.from_pretrained("finalCheckpoint_25_05_11/", num_labels=54).cuda()
+print("finished downloading")
 
 
 ###############################################################################
@@ -234,23 +236,25 @@ def predict(input_batches):
         # print(torch.tensor([tokenizer(batches)['input_ids']]).cuda().shape)
         # print(torch.tensor([tokenizer(batches)['attention_mask']]).cuda()["logits"][0].shape)
         #print(torch.tensor([tokenizer(batches)['input_ids']]).cuda().squeeze().shape)
-        with torch.no_grad():
-            pred=(sig(model(torch.tensor([tokenizer(batches)['input_ids']]).squeeze().cuda(),torch.tensor([tokenizer(batches)['attention_mask']]).squeeze().cuda())["logits"]).tolist())
+        print(tokenizer(batches)['input_ids'])
+        print(torch.tensor([tokenizer(batches)['input_ids']]).squeeze().cuda())
+        pred=(sig(model(torch.tensor([tokenizer(batches)['input_ids']]).squeeze().cuda(),torch.tensor([tokenizer(batches)['attention_mask']]).squeeze().cuda())["logits"]).tolist())
         #print(len(pred[0]))
         for p in pred:
+            print(p)
             outputpreds.append(p)
     return outputpreds
 
 
-def write_output(pred,listofpeps):
-    hf=open("output_predictions.csv",'w+')
+def write_output(pred,listofpeps,file_output):
+    hf=open(f"{file_output}",'w+')
     n="\n"
     writethisline="pep,"
     for i in range(len(labsoi)):
-        writethisline+=pos2lab[i]+','
-    hf.write(writethisline[:-1]+n)
+        writethisline+=pos2lab[i]
+    hf.write(writethisline+n)
     for p,ip in zip(pred,listofpeps):
-        writethisline=f"{ip},"
+        writethisline=f"{ip}"
         r=ip[10]
         #print(p)
         easyreadlab=getlab(p,r)
@@ -384,11 +388,14 @@ def main():
         if i%batch_size==0 and i!=0:
             input_batches.append(temp)
             temp=[]
-        temp.append(pep)
+        if pep=='':
+            continue
+        temp.append(pep.replace("-", "<pad>"))
     input_batches.append(temp)
-    
+    print(listofpeps)
+    print(input_batches)
     pred=predict(input_batches=input_batches)
-    write_output(pred,listofpeps)
+    write_output(pred,listofpeps,file_output)
 
     
 
