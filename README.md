@@ -190,8 +190,8 @@ Use the code below to get started with the model.
 Usage: python3 claspp_forward.py [OPTION]... --input INPUT [FASTA_FILE or TXT_FILE]...
 predict PTM events on peptides or full sequences
 
-Example 1: python3 claspp_forward.py -B 100 -S 0 -i fake.txt
-Example 2: python3 claspp_forward.py -B 50 -S 1 -i fake.fasta
+Example 1: python3 claspp_forward.py -B 100 -S 0 -i random.txt
+Example 2: python3 claspp_forward.py -B 50 -S 1 -i random.fasta
 
 FASTA_FILE contain protein sequences in proper fasta or a2m format
 TXT_FILE cointain protien peptides 21 in length with the center
