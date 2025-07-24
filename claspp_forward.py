@@ -249,9 +249,9 @@ def predict(input_batches):
 def write_output(pred,listofpeps,file_output):
     hf=open(f"{file_output}",'w+')
     n="\n"
-    writethisline="pep,"
+    writethisline="pep"
     for i in range(len(labsoi)):
-        writethisline+=pos2lab[i]
+        writethisline+=','+pos2lab[i]+
     hf.write(writethisline+n)
     for p,ip in zip(pred,listofpeps):
         writethisline=f"{ip}"
@@ -259,9 +259,9 @@ def write_output(pred,listofpeps,file_output):
         #print(p)
         easyreadlab=getlab(p,r)
         for sp in easyreadlab:
-            writethisline+=f"{sp},"
+            writethisline+=f",{sp}"
         
-        writethisline=writethisline[:-1]+n
+        writethisline=writethisline[:]+n
         hf.write(writethisline)
     hf.close()
         
