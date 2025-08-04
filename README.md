@@ -92,20 +92,20 @@ Installing torch can be the most complex part
 
 
 
+
 | Repo  | Link | Discription|
 | ------------- | ------------- |------------------------------------------|
-| GitHub  | [github version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but needs the to run the code to generate all the helper-files (will take some time run this code)|
+| GitHub  | [github version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but but no data. It needs you to run the code to generate all the helper-files (will take some time run this code)|
 | Zenodo  | [zenodo version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main) | This version contains code and helper files already genrated. mostly for proof of concept and seeing the all the data intermeidate states |
-| GitHub  | [github version Forward](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but NOT any weights (file to big)|
+| GitHub  | [github version Forward](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but NOT any weights (file to big for github)|
 | Huggingface | [huggingface version Forward](https://huggingface.co/gravelcompbio/Claspp)  | This verstion contains code and training weights |
 | Zenodo | [zenodo version training_data](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | zenodo version of training/testing/validation data|
-| Hugingface | [huggingface version training_data](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | huggingface version of training/testing/validation data|
-| Hugingface  | [gradio lab webtool](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | webtool hosted on gradio lab (huggingface)|
-| webtool | [website version of webtool](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | wettool hosted on a server|
+| webtool | [website version of webtool](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | webtool hosted on a server|
 
 - **Repository:** [More Information Needed]
 - **Paper [optional]:** [More Information Needed]
 - **Demo [optional]:** [More Information Needed]
+
 
 
 
@@ -114,7 +114,7 @@ Installing torch can be the most complex part
 
 ### Downloading this repository   
 
-make sure [git lfs](https://git-lfs.com/) is install 
+make sure [git lfs](https://git-lfs.com/) is installed 
 
 ```   
 git clone https://huggingface.co/esbglab/Claspp_forward
@@ -128,7 +128,7 @@ cd Claspp_data_cur
 
 
 ### Creating this conda environment 
-(yml file is include but torch sometimes makes it not useable depending on your nvidia driver)
+
 
 Just type these lines of code into the terminal after you download this repository (this assumes you have [anaconda](https://www.anaconda.com/) already installed) 
 
@@ -171,7 +171,7 @@ pip3 install torch torchvision torchaudio
 
   
 
-We provided code to test Phosformer-ST (see section below) 
+We provided code to test CLASPP (see section below) 
 
   
 :tada: you are know ready to run the code :tada: 
