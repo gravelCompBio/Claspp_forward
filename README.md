@@ -97,7 +97,7 @@ Installing torch can be the most complex part
 | ------------- | ------------- |------------------------------------------|
 | GitHub  | [github version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but but no data. It needs you to run the code to generate all the helper-files (will take some time run this code)|
 | Zenodo  | [zenodo version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main) | This version contains code and helper files already genrated. mostly for proof of concept and seeing the all the data intermeidate states |
-| GitHub  | [github version Forward](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but NOT any weights (file to big for github)|
+| GitHub  | [github version Forward](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but NOT any weights (file too big for github)|
 | Huggingface | [huggingface version Forward](https://huggingface.co/gravelcompbio/Claspp)  | This verstion contains code and training weights |
 | Zenodo | [zenodo version training_data](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | zenodo version of training/testing/validation data|
 | webtool | [website version of webtool](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | webtool hosted on a server|
@@ -115,6 +115,8 @@ Installing torch can be the most complex part
 ### Downloading this repository   
 
 make sure [git lfs](https://git-lfs.com/) is installed 
+
+Can not store weight files here (too big)
 
 ```   
 git clone https://huggingface.co/esbglab/Claspp_forward
