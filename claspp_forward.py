@@ -251,7 +251,7 @@ def write_output(pred,listofpeps,file_output):
     n="\n"
     writethisline="pep"
     for i in range(len(labsoi)):
-        writethisline+=','+pos2lab[i]+
+        writethisline+=','+pos2lab[i]
     hf.write(writethisline+n)
     for p,ip in zip(pred,listofpeps):
         writethisline=f"{ip}"
