@@ -1,29 +1,22 @@
 
 # Contrastively Learned Attention based Stratified PTM Predictor (CLASPP) a unified PTM prediction model
 
-<!-- Provide a quick summary of what the model is/does. -->
-
-
-CLASPP is a ESM2-150m protein lanuguage model that can pred PTM envents occuring on the substrate based 
-off primary protein sequence. This is done on multiple differnt PTM types (12) as a form of multi-label
-classifcation. The encoder is training on a supervised Contrastive learing task then the classifcation
-head is finetunted on the multi-label classifcation. 
-
-Post-Translational Modifications (PTMs) are a fundamental mechanism for regulating cellular functions and 
-increasing the functional diversity of the proteome. Despite the identification of hundreds of unique PTMs 
-through mass-spectrometry (MS) studies, accurately predicting many PTM types based on sequence data alone 
-remains a significant challenge. 
-
-Existing PTM prediction models predominantly focus on either single PTM types or employ ensemble methods 
-that combine multiple models to predict different PTM types. This fragmentation is largely driven by the 
-vast imbalance in data availability across PTM types making it difficult to predict multiple PTM types 
-with a single model. To address this limitation, we present the Contrastively Learned Attention-Based 
-Stratified PTM Predictor (CLASPP), a unified PTM prediction model.
 
 
 <p align="center">
   <img width="100%" src= "figures/Screenshot%20from%202025-07-11%2014-10-57.png">
 </p>
+
+
+CLASPP is a ESM2-150m protein lanuguage model that can pred PTM envents occuring on the substrate based 
+off primary protein sequence. This is done on multiple differnt PTM types (12) as a form of multi-label
+classifcation. The encoder is training on a supervised Contrastive learing task then the classifcation
+head is finetunted on the multi-label classifcation. Existing PTM prediction models predominantly focus 
+on either single PTM types or employ ensemble methods that combine multiple models to predict different 
+PTM types. This fragmentation is largely driven by the vast imbalance in data availability across PTM 
+types making it difficult to predict multiple PTM types with a single model. To address this 
+limitation, we present the Contrastively Learned Attention-Based Stratified PTM Predictor (CLASPP), 
+a unified PTM prediction model.
 
 
 
@@ -55,59 +48,6 @@ Make sure you go to this website [pytorch](https://pytorch.org/get-started/local
 Follow along with its recommendation  
 
 Installing torch can be the most complex part  
-
-  
-
-
-
-## Model Details
-
-
-
-<p align="center">
-  <img width="100%" src= "figures/Screenshot%20from%202025-07-11%2014-19-21.png">
-</p>
-
-| PTM type  | Residue trained on | Number of clusters allocated|output indexes|input label indexes (training)|
-| -------------------- | ------------- |--------------------------|------------|-------------|
-| ST_Phosphorylation | S,T | 5 | 0 or 1 | 0-4 |
-| Y_Phosphorylation | Y | 1 | 3 | 25 |
-| K_Ubiquitination | K | 20 | 2 | 5-24 |
-| K_Acetylation | K | 10 | 4 | 26-35 |
-| AM_Acetylation | A,M | 1 | 13 or 14 | 49 |
-| N_N-linked-Glycosylation | N | 1 | 5 | 36 |
-| ST_O-linked-Glycosylation | S,T | 5 | 6 or 7 | 37-41 |
-| RK_Methylation | RK | 4 | 8 or 9 | 42-45 |
-| K_Sumoylation | K | 1 | 10 | 46 |
-| K_Malonylation | K | 1 | 11 | 53 |
-| M_Sulfoxidation | M | 1 | 12 | 48 |
-| C_Glutathionylation | C | 1 | 15 | 50 |
-| C_S-palmitoylation | C | 1 | 16 | 51 |
-| PK_Hydroxylation | P,K | 1 | 17 or 18 | 52 |
-|negitve| all res | N/A | 19 | 53|
-
-
-
-### Model Sources [optional]
-
-
-
-
-| Repo  | Link | Discription|
-| ------------- | ------------- |------------------------------------------|
-| GitHub  | [github version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but but no data. It needs you to run the code to generate all the helper-files (will take some time run this code)|
-| Zenodo  | [zenodo version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main) | This version contains code and helper files already genrated. mostly for proof of concept and seeing the all the data intermeidate states |
-| GitHub  | [github version Forward](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but NOT any weights (file too big for github)|
-| Huggingface | [huggingface version Forward](https://huggingface.co/gravelcompbio/Claspp)  | This verstion contains code and training weights |
-| Zenodo | [zenodo version training_data](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | zenodo version of training/testing/validation data|
-| webtool | [website version of webtool](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | webtool hosted on a server|
-
-- **Repository:** [More Information Needed]
-- **Paper [optional]:** [More Information Needed]
-- **Demo [optional]:** [More Information Needed]
-
-
-
 
 # How to Get Started with the Model
 
@@ -180,6 +120,59 @@ We provided code to test CLASPP (see section below)
   
 
 Use the code below to get started with the model.
+
+
+
+## Model Details
+
+
+
+<p align="center">
+  <img width="100%" src= "figures/Screenshot%20from%202025-07-11%2014-19-21.png">
+</p>
+
+| PTM type  | Residue trained on | Number of clusters allocated|output indexes|input label indexes (training)|
+| -------------------- | ------------- |--------------------------|------------|-------------|
+| ST_Phosphorylation | S,T | 5 | 0 or 1 | 0-4 |
+| Y_Phosphorylation | Y | 1 | 3 | 25 |
+| K_Ubiquitination | K | 20 | 2 | 5-24 |
+| K_Acetylation | K | 10 | 4 | 26-35 |
+| AM_Acetylation | A,M | 1 | 13 or 14 | 49 |
+| N_N-linked-Glycosylation | N | 1 | 5 | 36 |
+| ST_O-linked-Glycosylation | S,T | 5 | 6 or 7 | 37-41 |
+| RK_Methylation | RK | 4 | 8 or 9 | 42-45 |
+| K_Sumoylation | K | 1 | 10 | 46 |
+| K_Malonylation | K | 1 | 11 | 53 |
+| M_Sulfoxidation | M | 1 | 12 | 48 |
+| C_Glutathionylation | C | 1 | 15 | 50 |
+| C_S-palmitoylation | C | 1 | 16 | 51 |
+| PK_Hydroxylation | P,K | 1 | 17 or 18 | 52 |
+|negitve| all res | N/A | 19 | 53|
+
+
+
+### Model Sources [optional]
+
+
+
+
+| Repo  | Link | Discription|
+| ------------- | ------------- |------------------------------------------|
+| GitHub  | [github version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but but no data. It needs you to run the code to generate all the helper-files (will take some time run this code)|
+| Zenodo  | [zenodo version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur/tree/main) | This version contains code and helper files already genrated. mostly for proof of concept and seeing the all the data intermeidate states |
+| GitHub  | [github version Forward](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | This verstion contains code but NOT any weights (file too big for github)|
+| Huggingface | [huggingface version Forward](https://huggingface.co/gravelcompbio/Claspp)  | This verstion contains code and training weights |
+| Zenodo | [zenodo version training_data](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | zenodo version of training/testing/validation data|
+| webtool | [website version of webtool](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | webtool hosted on a server|
+
+- **Repository:** [More Information Needed]
+- **Paper [optional]:** [More Information Needed]
+- **Demo [optional]:** [More Information Needed]
+
+
+
+
+
 
 
 
