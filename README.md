@@ -109,7 +109,7 @@ Installing torch can be the most complex part
 
 
 
-## How to Get Started with the Model
+# How to Get Started with the Model
 
 
 ### Downloading this repository   
