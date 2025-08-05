@@ -128,8 +128,9 @@ Use the code below to get started with the model.
 
 
 <p align="center">
-  <img width="100%" src= "figures/Screenshot%20from%202025-07-11%2014-19-21.png">
+  <img width="100%" src= "https://github.com/gravelCompBio/Claspp_forward/blob/main/figures/Screenshot%20from%202025-08-05%2011-49-49.png">
 </p>
+
 
 | PTM type  | Residue trained on | Number of clusters allocated|output indexes|input label indexes (training)|
 | -------------------- | ------------- |--------------------------|------------|-------------|
@@ -150,10 +151,11 @@ Use the code below to get started with the model.
 |negitve| all res | N/A | 19 | 53|
 
 
+## Data organization and number of clusters
 
-### Model Sources [optional]
-
-
+<p align="center">
+  <img width="100%" src= "https://github.com/gravelCompBio/Claspp_forward/blob/main/figures/Screenshot%20from%202025-08-05%2011-48-48.png">
+</p>
 
 
 | Repo  | Link | Discription|
