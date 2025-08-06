@@ -166,9 +166,6 @@ Use the code below to get started with the model.
 | Zenodo | [zenodo version training_data](https://zenodo.org/records/16739128?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY4MDBkYjUwLTVlZjktNDZlNy04MjZjLTgzZjA0NjZiYmZlYyIsImRhdGEiOnt9LCJyYW5kb20iOiJlMThhZGNlMWUxN2EzNjYxNzllYjg5MWRiZjhiMWYxNSJ9.7Os5ZzQLT3TJu3Clv1Sxvh8oVtFTxxoeYLACFgKwZRjCApQdfQO2-AvctQ-eIIEojKTBGHLCcHlMTDG38AKn8A)  | zenodo version of training/testing/validation data|
 | webtool | [website version of webtool](https://github.com/gravelCompBio/Claspp_data_cur/tree/main)  | webtool hosted on a server|
 
-- **Repository:** [More Information Needed]
-- **Paper [optional]:** [More Information Needed]
-- **Demo [optional]:** [More Information Needed]
 
 
 
@@ -226,5 +223,3 @@ Pattern selection and interpretation:
 - **Language(s) (NLP):** [Protein Sequence]
 - **License:** [MIT]
 - **Finetuned from model:** [ESM-2 150M]
-
-[More Information Needed]
