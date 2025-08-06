@@ -179,7 +179,7 @@ Use the code below to get started with the model.
 
 ## Uses
 
-<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
+
 
 ### Direct Use
 ```
@@ -217,14 +217,14 @@ Pattern selection and interpretation:
 
 
 
-- **Developed by:** Major author for most code Nathan Gravel. Finetuning code inspried by Zhongliang Zhou,
-- Contrastive learing code inspried by Ruili Fang, Codebase testing and verstion controle by Austin Downes,
+- **Developed by:** Major author for most code Nathan Gravel.
+- Finetuning code inspried by Zhongliang Zhou,
+- Contrastive learing code inspried by Ruili Fang,
 - Webtool dev Saber Soleymani
-- **Funded by [optional]:** [NIH]
-- **Shared by [optional]:** [More Information Neede]
+- Codebase testing and verstion controle by Austin Downes,
 - **Model type:** [Text classication]
 - **Language(s) (NLP):** [Protein Sequence]
 - **License:** [MIT]
-- **Finetuned from model [optional]:** [ESM-2 150M]
+- **Finetuned from model:** [ESM-2 150M]
 
 [More Information Needed]
