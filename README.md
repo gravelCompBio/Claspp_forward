@@ -20,8 +20,7 @@ a unified PTM prediction model.
 
 
 
-
-
+the manuscript can be found here (TBA)
 
 ## Quick overview of the dependencies 
 
