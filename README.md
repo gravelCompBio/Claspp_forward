@@ -19,7 +19,6 @@ limitation, we present the Contrastively Learned Attention-Based Stratified PTM 
 a unified PTM prediction model.
 
 
-Lin, Z., Akin, H., Rao, R., Hie, B., Zhu, Z., Lu, W., ... & Rives, A. (2023). Evolutionary-scale prediction of atomic-level protein structure with a language model. Science, 379(6637), 1123-1130.
 
 
 
@@ -130,6 +129,8 @@ Use the code below to get started with the model.
 <p align="center">
   <img width="100%" src= "https://github.com/gravelCompBio/Claspp_forward/blob/main/figures/Screenshot%20from%202025-08-05%2011-49-49.png">
 </p>
+
+Lin, Z., Akin, H., Rao, R., Hie, B., Zhu, Z., Lu, W., ... & Rives, A. (2023). Evolutionary-scale prediction of atomic-level protein structure with a language model. Science, 379(6637), 1123-1130.
 
 
 | PTM type  | Residue trained on | Number of clusters allocated|output indexes|input label indexes (training)|
