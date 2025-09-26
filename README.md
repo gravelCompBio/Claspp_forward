@@ -97,7 +97,7 @@ pip3 install datasets==4.0.0
 ```
 
 
-### **For installing torch you will have to download to the torch's specification if found on this website ** [pytroch](https://pytorch.org/get-started/locally/) ** 
+### **For installing torch you will have to download to the torch's specification found on this website ** [pytroch](https://pytorch.org/get-started/locally/) ** 
 
   
 
