@@ -62,7 +62,7 @@ git clone https://huggingface.co/esbglab/Claspp_forward
 
 
 ```   
-cd Claspp_data_cur
+cd Claspp_forward
 ``` 
 
 
