@@ -297,7 +297,7 @@ Pattern selection and interpretation:
   -o  --output              location of the output csv
 
 
-Report bugs to: 
+Report bugs on the github: https://github.com/gravelCompBio/Claspp_forward
 
 
 '''
