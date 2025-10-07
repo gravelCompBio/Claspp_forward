@@ -141,7 +141,7 @@ Lin, Z., Akin, H., Rao, R., Hie, B., Zhu, Z., Lu, W., ... & Rives, A. (2023). Ev
 | AM_Acetylation | A,M | 1 | 13 or 14 | 49 |
 | N_N-linked-Glycosylation | N | 1 | 5 | 36 |
 | ST_O-linked-Glycosylation | S,T | 5 | 6 or 7 | 37-41 |
-| RK_Methylation | RK | 4 | 8 or 9 | 42-45 |
+| RK_Methylation | R,K | 4 | 8 or 9 | 42-45 |
 | K_Sumoylation | K | 1 | 10 | 46 |
 | K_Malonylation | K | 1 | 11 | 53 |
 | M_Sulfoxidation | M | 1 | 12 | 48 |
