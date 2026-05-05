@@ -274,7 +274,7 @@ Example 1: python3 claspp_forward.py -B 100 -S 0 -i random.txt
 Example 2: python3 claspp_forward.py -B 50 -S 1 -i random.fasta
 
 FASTA_FILE contain protein sequences in proper fasta or a2m format
-TXT_FILE cointain protien peptides 21 in length with the center
+TXT_FILE contain protein peptides 21 in length with the center
 residue being the PTM modification site
 
 
@@ -287,7 +287,7 @@ Pattern selection and interpretation:
                             1 = read a fasta and scrape posible 21 peptides
                             that can be modified by a PTM 
                             0 = read a txt file that has the 21mer already 
-                            sperated and all peptides should be sperated by 
+                            separated and all peptides should be separated by 
                             a '\\n' (can be faster) than fasta option
   
   -h  --help                your reading it right now
@@ -295,10 +295,6 @@ Pattern selection and interpretation:
   -i  --input               location of the input fasta or txt
 
   -o  --output              location of the output csv
-
-
-Report bugs on the github: https://github.com/gravelCompBio/Claspp_forward
-
 
 '''
 WARNING_MESSAGE="""
