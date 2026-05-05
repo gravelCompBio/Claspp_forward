@@ -8,10 +8,10 @@
 </p>
 
 
-CLASPP is a ESM2-150m protein lanuguage model that can pred PTM envents occuring on the substrate based 
-off primary protein sequence. This is done on multiple differnt PTM types (12) as a form of multi-label
-classifcation. The encoder is training on a supervised Contrastive learing task then the classifcation
-head is finetunted on the multi-label classifcation. Existing PTM prediction models predominantly focus 
+CLASPP is a ESM2-150m protein language model that can predict PTM events occurring on the substrate based 
+from the primary protein sequence. This is done on multiple different PTM types (12) as a form of multi-label
+classification. The encoder is trained using a supervised contrastive learing task then the classification
+head is fine-tunted on the multi-label classification. Existing PTM prediction models predominantly focus 
 on either single PTM types or employ ensemble methods that combine multiple models to predict different 
 PTM types. This fragmentation is largely driven by the vast imbalance in data availability across PTM 
 types making it difficult to predict multiple PTM types with a single model. To address this 
@@ -114,7 +114,7 @@ pip3 install torch torchvision torchaudio
 We provided code to test CLASPP (see section below) 
 
   
-:tada: you are know ready to run the code :tada: 
+:tada: you are now ready to run the code :tada: 
   
 
 Use the code below to get started with the model.
@@ -148,7 +148,7 @@ Lin, Z., Akin, H., Rao, R., Hie, B., Zhu, Z., Lu, W., ... & Rives, A. (2023). Ev
 | C_Glutathionylation | C | 1 | 15 | 50 |
 | C_S-palmitoylation | C | 1 | 16 | 51 |
 | PK_Hydroxylation | P,K | 1 | 17 or 18 | 52 |
-|negitve| all res | N/A | 19 | 53|
+|negative| all res | N/A | 19 | 53|
 
 
 ## Data organization and number of clusters
@@ -165,7 +165,7 @@ Lin, Z., Akin, H., Rao, R., Hie, B., Zhu, Z., Lu, W., ... & Rives, A. (2023). Ev
 | ------------- | ------------- |------------------------------------------|
 | GitHub  | [github version Data_cur](https://github.com/gravelCompBio/Claspp_data_cur)  | This verstion contains code but but no data. It needs you to run the code to generate all the helper-files (will take some time run this code)|
 | GitHub  | [github version Forward](https://github.com/gravelCompBio/Claspp_forward)  | This verstion contains code but NOT any weights (file too big for github)|
-| Huggingface | [huggingface version Forward](https://huggingface.co/esbglab/Claspp_forward)  | This verstion contains code and training weights |
+| Huggingface | [huggingface version Forward](https://huggingface.co/esbglab/Claspp_forward)  | This version contains code and training weights |
 | Zenodo | [zenodo version training_data](https://zenodo.org/records/17674057)  | zenodo version of training/testing/validation data|
 
 
@@ -185,7 +185,7 @@ Example 1: python3 claspp_forward.py -B 100 -S 0 -i random.txt
 Example 2: python3 claspp_forward.py -B 50 -S 1 -i random.fasta
 
 FASTA_FILE contain protein sequences in proper fasta or a2m format
-TXT_FILE cointain protien peptides 21 in length with the center
+TXT_FILE contain protein peptides 21 in length with the center
 residue being the PTM modification site
 
 
@@ -198,7 +198,7 @@ Pattern selection and interpretation:
                             1 = read a fasta and scrape posible 21 peptides
                             that can be modified by a PTM 
                             0 = read a txt file that has the 21mer already 
-                            sperated and all peptides should be sperated by 
+                            separated and all peptides should be separated by 
                             a '\\n' (can be faster) than fasta option
   
   -h  --help                your reading it right now
@@ -213,10 +213,10 @@ Pattern selection and interpretation:
 
 
 - **Developed by:** Major author for most code Nathan Gravel.
-- Finetuning code inspried by Zhongliang Zhou,
-- Contrastive learing code inspried by Ruili Fang,
+- Fine-tuning code inspired by Zhongliang Zhou,
+- Contrastive learing code inspired by Ruili Fang,
 - Webtool dev Saber Soleymani
-- Codebase testing and verstion controle by Austin Downes,
+- Codebase testing and version controle by Austin Downes,
 - **Model type:** [Text classication]
 - **Language(s) (NLP):** [Protein Sequence]
 - **License:** [MIT]
